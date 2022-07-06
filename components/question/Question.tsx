@@ -1,3 +1,4 @@
+import React from "react";
 import {
   FlatList,
   ListRenderItemInfo,
@@ -6,14 +7,28 @@ import {
   View,
 } from "react-native";
 import { AnswerModel, QuestionModel } from "../../models";
-import { Text } from "../Text";
+
+import Text from "../Text";
+
+const styles = StyleSheet.create({
+  container: {
+    alignSelf: "stretch",
+  },
+  button: {
+    borderWidth: 1,
+    borderColor: "#000",
+    textAlign: "center",
+    paddingVertical: 12,
+    marginBottom: 10,
+  },
+});
 
 interface Props {
   question: QuestionModel;
   onAnswerPress: (n: number) => void;
 }
 
-export function Question({ question, onAnswerPress }: Props) {
+export default function Question({ question, onAnswerPress }: Props) {
   function renderAnswer({ item: answer }: ListRenderItemInfo<AnswerModel>) {
     return (
       <TouchableOpacity
@@ -35,16 +50,3 @@ export function Question({ question, onAnswerPress }: Props) {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignSelf: "stretch",
-  },
-  button: {
-    borderWidth: 1,
-    borderColor: "#000",
-    textAlign: "center",
-    paddingVertical: 12,
-    marginBottom: 10,
-  },
-});

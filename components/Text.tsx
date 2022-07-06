@@ -1,8 +1,5 @@
+import React from "react";
 import { StyleSheet, Text as NativeText, TextProps } from "react-native";
-
-export function Text({ style, children }: TextProps) {
-  return <NativeText style={[styles.text, style]}>{children}</NativeText>;
-}
 
 const styles = StyleSheet.create({
   text: {
@@ -10,3 +7,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
+
+export default function Text({ style, children }: TextProps) {
+  return <NativeText style={[styles.text, style]}>{children}</NativeText>;
+}

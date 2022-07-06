@@ -1,3 +1,4 @@
+import React from "react";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import {
   FlatList,
@@ -5,14 +6,32 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import { Container, Text } from "../components";
-import { Result } from "../components/results";
 import { UserSelectionModel } from "../models";
+
 import { Screens } from "./Screens";
+import Container from "../components/Container";
+import Text from "../components/Text";
+import Result from "../components/results/Result";
+
+const styles = StyleSheet.create({
+  container: {
+    paddingVertical: 18,
+  },
+  title: {
+    fontWeight: "bold",
+    marginBottom: 24,
+  },
+  button: {
+    marginTop: 24,
+  },
+  buttonText: {
+    fontWeight: "bold",
+  },
+});
 
 type Props = NativeStackScreenProps<Screens, "Results">;
 
-export function ResultsScreen({ navigation, route }: Props) {
+export default function ResultsScreen({ navigation, route }: Props) {
   const { userSelections } = route.params;
   const correctCount = userSelections.reduce((correctCount, userSelection) => {
     return userSelection.selectedAnswer === userSelection.question.correctAnswer
@@ -40,19 +59,3 @@ export function ResultsScreen({ navigation, route }: Props) {
     </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    paddingVertical: 18,
-  },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 24,
-  },
-  button: {
-    marginTop: 24,
-  },
-  buttonText: {
-    fontWeight: "bold",
-  },
-});

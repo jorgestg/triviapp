@@ -1,11 +1,14 @@
+import React from "react";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { TouchableOpacity } from "react-native";
-import { Container, Text } from "../components";
+
 import { Screens } from "./Screens";
+import Container from "../components/Container";
+import Text from "../components/Text";
 
 type Props = NativeStackScreenProps<Screens, "Home">;
 
-export function HomeScreen({ navigation }: Props) {
+export default function HomeScreen({ navigation }: Props) {
   function start() {
     navigation.navigate("Question");
   }

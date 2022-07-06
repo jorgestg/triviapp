@@ -1,15 +1,18 @@
+import React from "react";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { useEffect, useState } from "react";
-import { Container, Text } from "../components";
-import { Question } from "../components/question";
+
 import { QuestionModel, UserSelectionModel } from "../models";
-import { ErrorScreen } from "./ErrorScreen";
-import { LoadingScreen } from "./LoadingScreen";
 import { Screens } from "./Screens";
+import Container from "../components/Container";
+import Question from "../components/question/Question";
+import Text from "../components/Text";
+import ErrorScreen from "./ErrorScreen";
+import LoadingScreen from "./LoadingScreen";
 
 type Props = NativeStackScreenProps<Screens, "Question">;
 
-export function QuestionScreen({ navigation }: Props) {
+export default function QuestionScreen({ navigation }: Props) {
   const [current, setCurrent] = useState(0);
   const [questions, setQuestions] = useState<QuestionModel[]>([]);
   const [error, setError] = useState<Error | null>(null);

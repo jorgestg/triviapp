@@ -1,7 +1,12 @@
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Screens, HomeScreen, QuestionScreen, ResultsScreen } from "./screens";
 import { StatusBar } from "expo-status-bar";
+
+import { Screens } from "./screens/Screens";
+import HomeScreen from "./screens/HomeScreen";
+import QuestionScreen from "./screens/QuestionScreen";
+import ResultsScreen from "./screens/ResultsScreen";
 
 const Stack = createNativeStackNavigator<Screens>();
 

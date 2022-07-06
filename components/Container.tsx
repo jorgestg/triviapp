@@ -1,8 +1,5 @@
+import React from "react";
 import { StyleSheet, View, ViewProps } from "react-native";
-
-export function Container(props: ViewProps) {
-  return <View style={[styles.container, props.style]}>{props.children}</View>;
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -15,3 +12,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
 });
+
+export default function Container(props: ViewProps) {
+  return <View style={[styles.container, props.style]}>{props.children}</View>;
+}

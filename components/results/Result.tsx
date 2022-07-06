@@ -1,7 +1,16 @@
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { UserSelectionModel } from "../../models";
 
-export function Result({ question, selectedAnswer }: UserSelectionModel) {
+const styles = StyleSheet.create({
+  title: { fontSize: 18, fontWeight: "bold" },
+  text: { fontSize: 18 },
+});
+
+export default function Result({
+  question,
+  selectedAnswer,
+}: UserSelectionModel) {
   const color = {
     color: question.correctAnswer === selectedAnswer ? "green" : "red",
   };
@@ -19,8 +28,3 @@ export function Result({ question, selectedAnswer }: UserSelectionModel) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  title: { fontSize: 18, fontWeight: "bold" },
-  text: { fontSize: 18 },
-});
