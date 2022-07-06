@@ -1,4 +1,4 @@
-import { UserSelectionModel } from "../models";
+import { UserSelectionModel } from '../models';
 
 /** Screen-Parameters type map. */
 export type Screens = {

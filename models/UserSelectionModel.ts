@@ -1,4 +1,4 @@
-import { QuestionModel } from "./QuestionModel";
+import { QuestionModel } from './QuestionModel';
 
 export interface UserSelectionModel {
   question: QuestionModel;

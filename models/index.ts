@@ -1,2 +1,2 @@
-export * from "./QuestionModel";
-export * from "./UserSelectionModel";
+export * from './QuestionModel';
+export * from './UserSelectionModel';

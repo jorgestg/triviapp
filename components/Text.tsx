@@ -1,10 +1,10 @@
-import React from "react";
-import { StyleSheet, Text as NativeText, TextProps } from "react-native";
+import React from 'react';
+import { StyleSheet, Text as NativeText, TextProps } from 'react-native';
 
 const styles = StyleSheet.create({
   text: {
     fontSize: 24,
-    textAlign: "center",
+    textAlign: 'center',
   },
 });
 

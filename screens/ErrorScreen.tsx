@@ -1,7 +1,7 @@
-import React from "react";
-import { View } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 
-import Text from "../components/Text";
+import Text from '../components/Text';
 
 interface Props {
   error: Error;
@@ -9,8 +9,8 @@ interface Props {
 
 export default function ErrorScreen({ error }: Props) {
   return (
-    <View style={{ flex: 1, justifyContent: "center" }}>
-      <Text style={{ fontWeight: "bold" }}>Uh-oh! Algo salió mal</Text>
+    <View style={{ flex: 1, justifyContent: 'center' }}>
+      <Text style={{ fontWeight: 'bold' }}>Uh-oh! Algo salió mal</Text>
       <Text>{error.message}</Text>
     </View>
   );
